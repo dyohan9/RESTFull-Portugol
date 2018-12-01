@@ -1,14 +1,19 @@
-package com.algorif;
+package algorif.interpreter;
 
+import algorif.model.Portugol;
 import parser.OpenAlg;
 import parser.OpenAlgInterpreter;
 import parser.ParseException;
 import util.OpenAlgNode;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-class Interpreter{
-    void run(){
+public class InterpreterPortugol {
+    public List<Portugol> run(){
+        String stdout = "";
         try {
             String codePortugol = "algoritmo \"nome do algoritmo\"\n" +
                     "\n" +
@@ -29,15 +34,19 @@ class Interpreter{
             OpenAlg parser = new OpenAlg(this.createTempFile(codePortugol));
             OpenAlgNode root = parser.start();
             new OpenAlgInterpreter(parser.globals).run(root);
-
             System.out.flush();
             System.setOut(old);
-            System.out.println("Return StdOut: "+baos.toString());
 
+            stdout = baos.toString();
 
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
+
+        return new ArrayList<>(Collections.singletonList(
+                new Portugol(stdout)
+        ));
+
     }
 
     private String createTempFile(String codePortugol) throws IOException {
