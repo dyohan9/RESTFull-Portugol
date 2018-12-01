@@ -7,6 +7,7 @@ RESTFull que auxilia na interpretação de códigos feitos em Portugol
 * [Java 1.8.x](https://java.com/) - Linguagem utilizada
 * [Maven](https://maven.apache.org/) - Gerenciamento de Dependência
 * [SpringBoot](http://spring.io/) - O framework web usado
+* [Interpretador](https://sourceforge.net/projects/openalg/) - Interpretador Portugol
 
 ## Authors
 
