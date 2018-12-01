@@ -11,7 +11,7 @@ RESTFull que auxilia na interpretação de códigos feitos em Portugol
 
 ## Authors
 
-* **Daniel Yohan** - *Trabalho inicial no RESTFull* - [Daniel Yohan](https://github.com/dyohan9)
+* **Daniel Yohan** - *Trabalho inicial no RESTFull* - [dyohan9](https://github.com/dyohan9)
 
 Veja também a lista de [colaboradores](https://github.com/dyohan9/RESTFull-Portugol/contributors) que participaram deste projeto. 
 
